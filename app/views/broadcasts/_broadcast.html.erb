@@ -1,0 +1,10 @@
+<div class="actioncable_broadcast">
+  <p><strong><%= broadcast.content %></strong></p>
+  <p>Created At: <%= broadcast.created_at %></p>
+  <% user = current_user
+    if is_admin? %>
+  <%= link_to image_tag('eye.jpg', alt: 'Show',
+                        title: 'Show details', border: '0'),
+              broadcast_path(broadcast) %>
+  <% end %>
+</div>

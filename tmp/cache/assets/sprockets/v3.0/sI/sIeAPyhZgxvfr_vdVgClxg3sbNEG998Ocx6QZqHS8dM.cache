@@ -1,0 +1,12 @@
+I"(function() {
+  App.broadcasts = App.cable.subscriptions.create("BroadcastsChannel", {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {},
+    speak: function() {
+      return this.perform('speak');
+    }
+  });
+
+}).call(this);
+:ET
